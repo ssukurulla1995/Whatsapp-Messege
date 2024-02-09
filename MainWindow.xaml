@@ -1,0 +1,50 @@
+﻿<Window x:Class="Whatsapp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Whatsapp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="564" Width="1262" Foreground="White" Background="Black">
+    <Grid>
+
+        <Rectangle HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="322" RadiusX="20.5" RadiusY="20.5" Margin="67,22,0,0" Fill="#FF373737"/>
+        <Label Content="Whatsapp Messege" HorizontalAlignment="Left" Margin="99,24,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Width="265" FontFamily="Arial Black" Height="38"/>
+        <Grid Margin="25,71,0,37" HorizontalAlignment="Left" Width="401" Background="#FF2F2F2F">
+            <Label Content="TO Sende :" HorizontalAlignment="Left" Margin="31,27,0,0" VerticalAlignment="Top" Foreground="White" FontSize="11" Width="110" FontFamily="Arial Black" Height="22"/>
+            <TextBox x:Name="ToNumber" Text="To Send" Margin="30,47,44,0" TextWrapping="Wrap" BorderThickness="0,0,0,0" BorderBrush="White" Foreground="#FF6D6D6D" TabIndex="2147483644" AutomationProperties.HelpText="Enter to number :" Height="31" VerticalAlignment="Top" FontSize="18" FontFamily="Arial" FontWeight="Bold">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Messege :" HorizontalAlignment="Left" Margin="31,84,0,0" VerticalAlignment="Top" Foreground="White" FontSize="11" Width="110" FontFamily="Arial Black" Height="22"/>
+            <RichTextBox x:Name="MessegeContect" Margin="30,110,44,68" Foreground="#FF525252" Uid="MessegeContect" AutomationProperties.Name="">
+                <RichTextBox.Effect>
+                    <DropShadowEffect/>
+                </RichTextBox.Effect>
+                <RichTextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </RichTextBox.BorderBrush>
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text="Enter Messege" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            <Button x:Name="MessegesendBTN" Content="Send Now" Margin="108,0,127,20" BorderThickness="0,0,0,0" Background="DeepSkyBlue" FontFamily="Arial Black" Uid="MessegesendBTN" Height="28" VerticalAlignment="Bottom" Click="MessegesendBTN_Click">
+                <Button.Foreground>
+                    <SolidColorBrush Color="White" Opacity="1"/>
+                </Button.Foreground>
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </Button.BorderBrush>
+            </Button>
+        </Grid>
+        <Canvas Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Width="326" Uid="AlterMessege" Margin="0,5,-86,0">
+            <Rectangle Height="42" Width="322" RadiusX="20.5" RadiusY="20.5" Fill="#FF016D52" OpacityMask="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="6" Canvas.Top="3"/>
+            <Label Content="Messege Sent" Foreground="White" FontSize="24" Width="265" FontFamily="Arial Black" Height="38" OpacityMask="Black" HorizontalAlignment="Left" Canvas.Left="29" Canvas.Top="4" VerticalAlignment="Top"/>
+
+        </Canvas>
+
+    </Grid>
+</Window>
